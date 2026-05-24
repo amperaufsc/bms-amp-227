@@ -1,0 +1,70 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 25, "patch": 0 },
+
+  "configurePresets": [
+    {
+      "name": "_base",
+      "hidden": true,
+      "description": "Settings comuns a todos os presets do bms-amp-227",
+      "binaryDir": "${sourceDir}/${presetName}",
+      "toolchainFile": "${sourceDir}/cubeide-gcc.cmake"
+    },
+    {
+      "name": "_make",
+      "hidden": true,
+      "inherits": "_base",
+      "description": "Base que usa o make.exe do STM32CubeIDE",
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.make.win32_2.2.0.202409170845/tools/bin/make.exe"
+      }
+    },
+    {
+      "name": "_ninja",
+      "hidden": true,
+      "inherits": "_base",
+      "description": "Base que usa o ninja.exe do STM32CubeIDE (builds em paralelo mais rapidos)",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "C:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.ninja.win32_1.1.0.202511131536/tools/bin/ninja.exe"
+      }
+    },
+
+    {
+      "name": "Debug",
+      "displayName": "Debug (Make)",
+      "description": "Build com simbolos para gdb e -O0",
+      "inherits": "_make",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    },
+    {
+      "name": "Release",
+      "displayName": "Release (Make)",
+      "description": "Build otimizado -Os, sem assertion",
+      "inherits": "_make",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+    },
+    {
+      "name": "Debug-Ninja",
+      "displayName": "Debug (Ninja)",
+      "description": "Igual ao Debug mas usando o ninja em vez de make",
+      "inherits": "_ninja",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    },
+    {
+      "name": "Release-Ninja",
+      "displayName": "Release (Ninja)",
+      "description": "Igual ao Release mas usando o ninja em vez de make",
+      "inherits": "_ninja",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
+    }
+  ],
+
+  "buildPresets": [
+    { "name": "Debug",         "configurePreset": "Debug",         "jobs": 0 },
+    { "name": "Release",       "configurePreset": "Release",       "jobs": 0 },
+    { "name": "Debug-Ninja",   "configurePreset": "Debug-Ninja",   "jobs": 0 },
+    { "name": "Release-Ninja", "configurePreset": "Release-Ninja", "jobs": 0 }
+  ]
+}

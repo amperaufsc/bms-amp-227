@@ -1,0 +1,3 @@
+C:/Users/Guilherme Lettmann/STM32CubeIDE/workspace_1.18.1/bms-amp-227/Release-Ninja/CMakeFiles/bms-amp-227.dir
+C:/Users/Guilherme Lettmann/STM32CubeIDE/workspace_1.18.1/bms-amp-227/Release-Ninja/CMakeFiles/edit_cache.dir
+C:/Users/Guilherme Lettmann/STM32CubeIDE/workspace_1.18.1/bms-amp-227/Release-Ninja/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,6 @@
+# ninja log v5
+62	348	8013519717975779	CMakeFiles/bms-amp-227.dir/Startup/startup_stm32g474retx.s.obj	3f0a375647b68684
+80	397	8013519718481087	CMakeFiles/bms-amp-227.dir/Sources/main.c.obj	dd2aaba46a18d437
+124	466	8013519719141039	CMakeFiles/bms-amp-227.dir/Sources/sysmem.c.obj	c45f1b71c44e14d3
+103	585	8013519720276671	CMakeFiles/bms-amp-227.dir/Sources/syscalls.c.obj	dd618ebcf02a3ee8
+587	1125	8013519723606375	bms-amp-227.elf	7e32e7fa0de03b57
