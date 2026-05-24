@@ -59,7 +59,7 @@ bms-amp-227/
 
 ## Status
 
-Em bring-up. Veja [Issues](https://github.com/amperaufsc/bms-amp-227/issues) e [Project board](https://github.com/orgs/amperaufsc/projects) pro estado atual.
+Em bring-up. Veja [Issues](https://github.com/amperaufsc/bms-amp-227/issues) e [Project board](https://github.com/orgs/amperaufsc/projects/6) pro estado atual.
 
 ## Licenca
 
