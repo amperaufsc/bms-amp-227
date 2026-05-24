@@ -44,18 +44,31 @@ bms-amp-227/
 +- CMakeLists.txt           # configuracao do build
 +- CMakePresets.json        # presets Debug/Release × Make/Ninja
 +- cubeide-gcc.cmake        # toolchain file (paths absolutos do CubeIDE)
-+- STM32G474RETX_FLASH.ld   # linker script (gerado pelo CubeIDE)
++- STM32G474RETX_FLASH.ld   # linker script
 +- Startup/
-|  +- startup_stm32g474retx.s  # vector table e startup ASM
+|  +- startup_stm32g474retx.s
 +- Sources/
-|  +- main.c
-|  +- syscalls.c
-|  +- sysmem.c
+|  +- main.c, syscalls.c, sysmem.c
++- hw/                      # hardware (PCB Altium + docs + mecanico)
+|  +- pcb/                  # projeto Altium (.PrjPcb, .SchDoc, .PcbDoc, libs)
+|  +- docs/                 # requisitos, design rules, changelog
+|  +- mech/                 # modelos 3D STEP, fixacao
++- tools/                   # scripts de setup (GitHub bootstrap, etc.)
 +- (TBD) App/               # logica de aplicacao (bms.c, faults.c, can_bms.c)
 +- (TBD) Bsp/               # board support: clock, gpio, spi, board.h
 +- (TBD) Drivers/           # CMSIS + LL drivers necessarios
 +- (TBD) External/          # bibliotecas vendored (L9963E_lib)
 ```
+
+## Hardware (PCB)
+
+Projeto eletrico em **Altium Designer** dentro de [`hw/`](hw/). Arquivos binarios do Altium ficam em **Git LFS** - antes do primeiro clone, instalar:
+
+```powershell
+git lfs install
+```
+
+Detalhes em [`hw/README.md`](hw/README.md).
 
 ## Status
 

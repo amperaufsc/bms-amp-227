@@ -1,2 +1,54 @@
-# Auto detect text files and perform LF normalization
+# =============================================================================
+# Auto-detect text files and normalize line endings
+# =============================================================================
 * text=auto
+
+# =============================================================================
+# Force LF on shell scripts and source code (cross-platform consistency)
+# =============================================================================
+*.sh        text eol=lf
+*.c         text eol=lf
+*.h         text eol=lf
+*.s         text eol=lf
+*.S         text eol=lf
+*.cmake     text eol=lf
+*.md        text eol=lf
+*.json      text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+*.ld        text eol=lf
+CMakeLists.txt text eol=lf
+
+# =============================================================================
+# Altium Designer - binarios via Git LFS
+# (Requer: git lfs install antes de clonar/commitar)
+# =============================================================================
+*.SchDoc    filter=lfs diff=lfs merge=lfs -text
+*.PcbDoc    filter=lfs diff=lfs merge=lfs -text
+*.SchLib    filter=lfs diff=lfs merge=lfs -text
+*.PcbLib    filter=lfs diff=lfs merge=lfs -text
+*.IntLib    filter=lfs diff=lfs merge=lfs -text
+*.DbLib     filter=lfs diff=lfs merge=lfs -text
+*.SchDot    filter=lfs diff=lfs merge=lfs -text
+*.PcbDot    filter=lfs diff=lfs merge=lfs -text
+*.SchPrj    filter=lfs diff=lfs merge=lfs -text
+*.OutJob    -text
+*.PrjPcb    -text
+*.PrjPcbStructure -text
+*.DsnWrk    -text
+
+# =============================================================================
+# Outros binarios comuns (datasheets, modelos 3D, imagens)
+# =============================================================================
+*.pdf       filter=lfs diff=lfs merge=lfs -text
+*.STEP      filter=lfs diff=lfs merge=lfs -text
+*.step      filter=lfs diff=lfs merge=lfs -text
+*.stp       filter=lfs diff=lfs merge=lfs -text
+*.STL       filter=lfs diff=lfs merge=lfs -text
+*.stl       filter=lfs diff=lfs merge=lfs -text
+*.png       filter=lfs diff=lfs merge=lfs -text
+*.jpg       filter=lfs diff=lfs merge=lfs -text
+*.jpeg      filter=lfs diff=lfs merge=lfs -text
+*.bmp       filter=lfs diff=lfs merge=lfs -text
+*.tif       filter=lfs diff=lfs merge=lfs -text
+*.tiff      filter=lfs diff=lfs merge=lfs -text
